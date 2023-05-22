@@ -1,3 +1,4 @@
+#Alunos Franklin Jeronimo, Vinicius Zaia, Caike Augusto , Eduardo Neves
 import os
 
 def to_binary(data):
@@ -149,5 +150,9 @@ def main():
     print_memory_table(physical_memory)
     print_access_log(mmu.access_log)
 
-if __name__ == '__main__':
+if __name__ == '__main__':blocks = [
+    (i * PAGE_SIZE, to_binary(f'Arquivo teste: {i} teste teste teste ' + '*'*(4096 - len(f'Arquivo teste: {i} teste teste teste ')))) 
+    for i in range(0, VIRTUAL_MEMORY_SIZE // PAGE_SIZE)
+]
+
     main()
